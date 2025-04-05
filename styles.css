@@ -39,6 +39,7 @@ a {
     height: 812px;
     top: 0;
     left: 150px;
+    border-right: solid 1px black;
   }
   
   .cv .info-right-group {
@@ -48,6 +49,14 @@ a {
     top: 0;
     left: 0;
   }
+  .cv .line-1{
+    position: absolute;
+    left: 25px;
+    top: 0px;
+    width: 1px;
+    height: 812px;
+    object-fit: cover;
+  }
   
   .cv .rectangle {
     position: absolute;
@@ -55,21 +64,25 @@ a {
     height: 71px;
     top: 11px;
     left: 0;
-    background-color: #e8dede;
+    background-color: #E9DFDF;
   }
   
   .cv .djibril-MAIGA {
     position: absolute;
-    height: 29px;
-    top: 16px;
+    top: 6px;
     left: 40px;
+    height: 29px;
+    width: 163px;
     font-family: "Gabarito-Bold", Helvetica;
     font-weight: 700;
-    color: transparent;
+    color: #607D75;;
     font-size: 24px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
+  }
+  .cv .maiga{
+    color: #FFC815;
   }
   
   .cv .text-wrapper {
@@ -111,6 +124,17 @@ a {
     left: 22px;
   }
   
+  .cv .rectangle-1 {
+    position: absolute;
+    width: 7px;
+    height: 71px;
+    top: 11px;
+    left: 22px;
+    background-color: #ffc815;
+    border-radius: 50px;
+    transform: rotate(180deg);
+  }
+
   .cv .rectangle-2 {
     position: absolute;
     width: 7px;
@@ -171,29 +195,31 @@ a {
     overflow: hidden;
   }
   
-  .cv .flying-mortarboard {
+   .cv .logo-profil {
     position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 0;
-    left: 0;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 2px;
   }
   
-  .cv .profils {
+  .cv .profil {
     position: absolute;
-    height: 19px;
-    top: 100px;
     left: 70px;
-    font-family: "Gabarito-Bold", Helvetica;
+    top: 101px;
+    width: 61px;
+    height: 19px;
+
+    font-family: 'Gabarito';
+    font-style: normal;
     font-weight: 700;
-    color: #607d75;
     font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #607D75
   }
   
-  .cv .p {
+  .cv .text_profil {
     position: absolute;
     width: 160px;
     height: 44px;
@@ -226,12 +252,14 @@ a {
     left: 2px;
   }
   
-  .cv .experiences {
+  .cv .experience {
     position: absolute;
+    top: 192px;
+    left: 70px;
     width: 106px;
     height: 21px;
-    top: 189px;
-    left: 70px;
+    
+
     font-family: "Gabarito-Bold", Helvetica;
     font-weight: 700;
     color: #607d75;
@@ -250,10 +278,11 @@ a {
   
   .cv .text-wrapper-2 {
     position: absolute;
+    top: 216px;
+    left: 40px;
     width: 161px;
     height: 21px;
-    top: 0;
-    left: 0;
+    
     font-family: "Gabarito-Bold", Helvetica;
     font-weight: 700;
     color: #607d75;
@@ -264,10 +293,11 @@ a {
   
   .cv .text-wrapper-3 {
     position: absolute;
+    top: 235px;
+    left: 40px;
     width: 115px;
     height: 10px;
-    top: 19px;
-    left: 0;
+    
     font-family: "Gabarito-SemiBold", Helvetica;
     font-weight: 600;
     color: #607d75;
@@ -375,15 +405,23 @@ a {
     height: 25px;
     top: 369px;
     left: 39px;
-    background-image: url(./img/frame.svg);
-    background-size: 100% 100%;
+    background-color: #ffc815;
+    border-radius: 50px;
+  }
+  .cv .logo-formation{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+
   }
   
   .cv .formation {
     position: absolute;
     width: 106px;
     height: 22px;
-    top: 371px;
+    top: 375px;
     left: 70px;
     font-family: "Gabarito-Bold", Helvetica;
     font-weight: 700;
@@ -482,9 +520,9 @@ a {
     width: 25px;
     height: 25px;
     top: 492px;
-    left: 40px;
-    background-image: url(./img/frame-2.svg);
-    background-size: 100% 100%;
+    left: 39px;
+    background-color: #ffc815;
+    border-radius: 50px;
   }
   
   .cv .text-wrapper-16 {
@@ -527,6 +565,38 @@ a {
     font-size: 16px;
     letter-spacing: 0;
     line-height: normal;
+  }
+  .cv .aws-cloud-pratictionner{
+    position: absolute;
+    left: 41px;
+    top: 531px;
+    width: 106px;
+    height: 12px;
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: #607D75;
+  }
+  .cv .aws-formation-date{
+    position: absolute;
+    left: 157px;
+    top: 532px;
+    width: 44px;
+    height: 10px;
+    font-family: 'Gabarito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #5C5A5A;
+
   }
   
   .cv .text-wrapper-18 {
