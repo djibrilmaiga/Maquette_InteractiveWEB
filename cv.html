@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV - Djibril MAÏGA</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="/script.js" defer></script>
 </head>
 <body>
     <div class="cv">
@@ -12,7 +14,7 @@
             <!--Partie droite du cv-->
             <div class="info-right">
                 <div class="info-right-group">
-                    <img class="line-1" src="img/line-2.png" />
+                    <div class="line-1"></div>
                     <div class="rectangle">                        
                         <div class="djibril-MAIGA">Djibril <span class="maiga">MAÏGA</span></div>
                         <div class="ingenieur-logiciel">INGÉNIEUR LOGICIEL</div>             
@@ -70,11 +72,10 @@
             </div>
             <!--Partie gauche du cv-->
             <div class="info-left">
-                <!--Polygone du triangle-->
                 <svg width="150" height="144" viewBox="0 0 150 144" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M-51 -55L150 1.20191L-0.075684 144L-51 -55Z" fill="#FFC815"/>
                 </svg>
-                <img class="line-2" src="img/line-1.png" />
+                <div class="line-2"></div>
                 <img class="photo-profil" src="img/Photo profil.png" />
                 <div class="rectangle-6"></div>
                 <div class="account-circle"></div>
@@ -96,13 +97,13 @@
                 <div class="text-wrapper-28">Discord</div>
                 <div class="group-10"><div class="rectangle-13"></div></div>
                 <div class="text-wrapper-29">HTML</div>
-                <div class="group-5"><img class="rectangle-10" src="img/rectangle-14.svg" /></div>
+                <div class="group-5"><div class="rectangle-10"> </div></div>
                 <div class="text-wrapper-30">CSS</div>
-                <div class="rectangle-wrapper"><img class="rectangle-10" src="img/rectangle-15.svg" /></div>
+                <div class="rectangle-wrapper"><div class="rectangle-10"></div></div>
                 <div class="text-wrapper-31">Javascript</div>
-                <div class="group-6"><img class="rectangle-10" src="img/rectangle-25.svg" /></div>
+                <div class="group-6"><div class="rectangle-10"></div></div>
                 <div class="text-wrapper-32">Java</div>
-                <div class="group-7"><img class="rectangle-11" src="img/rectangle-26.svg" /></div>
+                <div class="group-7"><div class="rectangle-11"></div></div>
                 <div class="text-wrapper-24">-------------------------</div>
                 <div class="rectangle-8"></div>
                 <img class="vector-4" src="img/vector-2.png" />
@@ -123,6 +124,12 @@
                 <img class="vector-7" src="img/voyage.png" />
                 <img class="vector-8" src="img/lecture.png" />
             </div>
+        </div>
+        <!--Boutons d'action-->
+        <div class="boutons">
+            <a href="/index.html" class="btn-home">Acceuil</a>
+            <button id="change-color" class="btn-color">Changer couleur</button>
+            <button id="telecharger" class="btn-pdf">Télécharger le pdf</button>
         </div>
     </div>
 </body>

@@ -81,24 +81,24 @@ a {
 
 /* Code CSS pour le CV*/
 .cv {
-    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    background-color: #ffffff;
   }
   
   .cv .container {
-    background-color: #ffffff;
-    width: 375px;
-    height: 812px;
     position: relative;
+    width: 375px;
+    height: 700px;
+    background-color: rgb(245, 245, 245);   
   }
-  
+
   .cv .info-right {
     position: absolute;
     width: 225px;
-    height: 812px;
+    height: 700px;
     top: 0;
     left: 150px;
     border-right: solid 1px black;
@@ -107,7 +107,7 @@ a {
   .cv .info-right-group {
     position: absolute;
     width: 225px;
-    height: 812px;
+    height: 700px;
     top: 0;
     left: 0;
   }
@@ -115,9 +115,9 @@ a {
     position: absolute;
     left: 25px;
     top: 0px;
-    width: 1px;
-    height: 812px;
-    object-fit: cover;
+    border-left: 1px solid black;
+    width: 0;
+    height: 700px;
   }
   
   .cv .rectangle {
@@ -170,7 +170,7 @@ a {
   }
   
   .cv .line {
-    height: 812px;
+    height: 750px;
     top: 0;
     position: absolute;
     width: 1px;
@@ -678,7 +678,7 @@ a {
   .cv .info-left {
     position: absolute;
     width: 150px;
-    height: 812px;
+    height: 700px;
     top: 0;
     left: 0;
     background-color: #607d75;
@@ -696,15 +696,15 @@ a {
     position: absolute;
     top: 121px;    
     left: 25px;
-    width: 1px;    
-    height: 691px;
-    object-fit: cover;
+    width: 0;    
+    height: 578px;
+    border-left: 1px solid #C2C1C1;
   }
   
   .cv .slice {
     position: absolute;
     width: 150px;
-    height: 812px;
+    height: 750px;
     top: 0;
     left: 0;
   }
@@ -1006,11 +1006,10 @@ a {
   }
   
   .cv .rectangle-10 {
-    position: absolute;
     width: 34px;
     height: 7px;
-    top: 0;
-    left: 0;
+    background-color: #ffc815;
+    border-radius: 50px;
   }
   
   .cv .group-5 {
@@ -1044,11 +1043,10 @@ a {
   }
   
   .cv .rectangle-11 {
-    position: absolute;
     width: 34px;
     height: 8px;
-    top: 0;
-    left: 0;
+    background-color: #ffc815;
+    border-radius: 50px;
   }
   
   .cv .group-wrapper {
@@ -1315,4 +1313,44 @@ a {
     height: 25px;
     top: 661px;
     left: 113px;
+  }
+  .boutons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 705px;
+    
+  }
+  .btn-home{
+    border: 1px solid gray;
+    background-color: #d2f772;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 75px;
+    text-align: center;
+    color: black;
+  }
+  .btn-home a{
+    text-decoration: none;
+    color: black;
+  }
+  .btn-home a:hover{
+    background-color: #be3127;
+  }
+  .btn-color{
+    border: 1px solid gray;
+    background-color: #6dc1bc;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 130px;
+    text-align: center;
+  }
+  .btn-pdf{
+    border: 1px solid gray;
+    background-color: #56df56;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 150px;
+    text-align: center;
   }
