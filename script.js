@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
             margin:       0,
             filename:     'MyFile.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            html2canvas:  { scale: 2, useCORS: true, scrollX: 0, scrollY: 50 },
+            jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
         };
 
         // Lance la conversion HTML → PDF

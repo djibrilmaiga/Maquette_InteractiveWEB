@@ -5,10 +5,10 @@
 }
 /*Suppression du code par defaut du navigateur*/
 
-html,
-body {
+html, body {
   margin: 0px;
   height: 100%;
+  font-size: 16px;
 }
 button:focus-visible {
   outline: 2px solid #4a90e2 !important;
@@ -17,9 +17,9 @@ button:focus-visible {
 a {
   text-decoration: none;
 }
-/*Début du code CSS*/
 
-/* Code CSS pour la page */
+/* Code CSS index.html */
+
 .body-home{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
@@ -27,8 +27,8 @@ a {
   align-items: center;
   height: 100vh;
   margin: 0;
-
 }
+
 .conteneur {
   display: flex;
   flex-direction: column;
@@ -38,17 +38,17 @@ a {
   height: 872px;
   background-color: #607D75;
   text-align: center;
-  padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
 }
+
 .profile-img{
   width: 190px;
   height: 198px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
+
 .btn{
   display: flex;
   align-items: center;
@@ -59,14 +59,19 @@ a {
   border-radius: 40px;
   margin-top: 90px;
   box-sizing: border-box;
-  width: 226px;
-  height: 92px;
-  font-size: 22px;
+  width: 60%;
+  height: 11%;
+  font-size: 1.4rem;
   font-weight: bold;
+}
+
+.btn:hover{
+  background-color: green;
+  color: #d9d9d9;
 }
 #titre-home{
   box-sizing: border-box;
-  font-size: 40px;
+  font-size:  2.5rem;
   line-height: 1.2em;
   color: #FFC815;
   margin-top: 10px;
@@ -74,25 +79,28 @@ a {
 }
 #poste{
   color: white;
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
 /* Code CSS pour le CV*/
+
 .cv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    background-color: #ffffff;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 794px;  /* largeur A4 à 96dpi */
+  height: 1123px; /* hauteur A4 à 96dpi */
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
   
   .cv .container {
     position: relative;
-    width: 375px;
-    height: 700px;
-    background-color: rgb(245, 245, 245);   
   }
 
   .cv .info-right {
@@ -101,15 +109,13 @@ a {
     height: 700px;
     top: 0;
     left: 150px;
-    border-right: solid 1px black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .cv .info-right-group {
     position: absolute;
     width: 225px;
     height: 700px;
-    top: 0;
-    left: 0;
   }
   .cv .line-1{
     position: absolute;
@@ -682,6 +688,7 @@ a {
     top: 0;
     left: 0;
     background-color: #607d75;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .cv .subtract {
@@ -690,6 +697,15 @@ a {
     height: 144px;
     top: 0;
     left: 0;
+  }
+  .cv .triangle{
+    position: relative;
+    width: 100%;
+    height: 21%;
+    left: 0px;
+    top: 0px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    background: #FFC815;
   }
   
   .cv .line-2 {    
@@ -1319,10 +1335,20 @@ a {
     flex-direction: row;
     justify-content: center;
     position: absolute;
-    top: 705px;
-    
+    top: 705px; 
+    left: 150px;   
   }
-  .btn-home{
+  .btn{
+    border: 1px solid gray;
+    background-color: #c9c9c9;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 150px;
+    font-size: 0.9rem;
+    height: 50px;
+    text-align: center;
+  }
+  /* .btn-home{
     border: 1px solid gray;
     background-color: #d2f772;
     margin: 5px;
@@ -1330,7 +1356,7 @@ a {
     width: 75px;
     text-align: center;
     color: black;
-  }
+  } */
   .btn-home a{
     text-decoration: none;
     color: black;
@@ -1338,7 +1364,7 @@ a {
   .btn-home a:hover{
     background-color: #be3127;
   }
-  .btn-color{
+  /* .btn-color{
     border: 1px solid gray;
     background-color: #6dc1bc;
     margin: 5px;
@@ -1353,4 +1379,63 @@ a {
     box-sizing: border-box;
     width: 150px;
     text-align: center;
+  } */
+
+  @media print {
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: auto;
+      font-size: 12pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  
+    .cv {
+      width: 794px;
+      height: 1123px;
+      page-break-after: avoid;
+      box-shadow: none;
+      margin: 0;
+      padding: 20px;
+    }
+  
+    /* Supprimer les éléments non essentiels à l’impression si besoin */
+    .no-print {
+      display: none !important;
+    }
   }
+  @media (max-width: 800px) {
+    .cv {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .cv .info-right,
+    .cv .info-right-group {
+      position: static;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+    }
+  
+    .cv .line-1,
+    .cv .rectangle,
+    .cv .rectangle-1,
+    .cv .rectangle-2,
+    .cv .rectangle-3,
+    .cv .rectangle-4,
+    .cv .rectangle-5 {
+      display: none;
+    }
+  
+    .cv .profil,
+    .cv .text_profil {
+      position: static;
+      width: 100%;
+      text-align: left;
+    }
+  }
+    
