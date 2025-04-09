@@ -1348,15 +1348,7 @@ a {
     height: 50px;
     text-align: center;
   }
-  /* .btn-home{
-    border: 1px solid gray;
-    background-color: #d2f772;
-    margin: 5px;
-    box-sizing: border-box;
-    width: 75px;
-    text-align: center;
-    color: black;
-  } */
+ 
   .btn-home a{
     text-decoration: none;
     color: black;
@@ -1364,22 +1356,31 @@ a {
   .btn-home a:hover{
     background-color: #be3127;
   }
-  /* .btn-color{
-    border: 1px solid gray;
-    background-color: #6dc1bc;
-    margin: 5px;
-    box-sizing: border-box;
-    width: 130px;
-    text-align: center;
+  .color-picker {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  .btn-pdf{
-    border: 1px solid gray;
-    background-color: #56df56;
-    margin: 5px;
-    box-sizing: border-box;
-    width: 150px;
-    text-align: center;
-  } */
+  .color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.2s ease;
+  }
+  .color-swatch:hover {
+    transform: scale(1.1);
+    border-color: #333;
+  }
+  .hidden {
+    display: none;
+  }
+  .text-accent, .accent-color {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }  
 
   @media print {
     body, html {
